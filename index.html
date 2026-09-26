@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Learn PHP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topbar" id="topbar">
+
+        <a href="#start" class="brand">
+            <span class="brand-mark">✪</span>
+
+            <span class="brand-text">
+                PHP<span>//</span>PULSE
+            </span>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+            <a href="#start">Start</a>
+            <a href="#syntax">Syntax</a>
+            <a href="#logic">Logic</a>
+            <a href="#functions">Functions</a>
+            <a href="#forms">Forms</a>
+            <a href="#lab">Lab</a>
+        </nav>
+
+        <button class="menu-button" id="menuButton" aria-label="Open navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero" id="start">
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+                    <span class="pulse-dot"></span>
+                    BEGINNER PHP TUTORIAL
+                </div>
+
+                <h1>
+                    Code the
+                    <em>LOGIC</em>
+                    behind the web.
+                </h1>
+
+                <p class="hero-description">
+                    Learn PHP from the basics and understand how server-side
+                    code turns user input into dynamic web pages.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#syntax" class="primary-button">
+                        Start Learning
+                        <span>↓</span>
+                    </a>
+
+                    <a href="#lab" class="text-button">
+                        Try PHP Online
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-art">
+
+                <div class="php-word">
+                    PHP
+                </div>
+
+                <div class="floating-tag tag-one">
+                    &lt;?php
+                </div>
+
+                <div class="floating-tag tag-two">
+                    echo()
+                </div>
+
+                <div class="floating-tag tag-three">
+                    $_POST
+                </div>
+
+                <div class="server-stack">
+
+                    <div class="stack-line"></div>
+
+                    <div class="stack-card">
+                        <span>REQUEST</span>
+                        <strong>DATA</strong>
+                    </div>
+
+                    <div class="stack-card active">
+                        <span>SERVER</span>
+                        <strong>PHP</strong>
+                    </div>
+
+                    <div class="stack-card">
+                        <span>RESPONSE</span>
+                        <strong>HTML</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="flow-section">
+
+            <div class="section-intro compact">
+                <span class="section-number">01: HOW PHP WORKS</span>
+
+                <h2>
+                    From browser request
+                    <br>
+                    to server response.
+                </h2>
+            </div>
+
+
+            <div class="flow-diagram">
+
+                <div class="flow-node">
+                    <span class="node-number">01</span>
+                    <strong>Browser</strong>
+                    <small>User requests a page</small>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-node">
+                    <span class="node-number">02</span>
+                    <strong>Server</strong>
+                    <small>Receives the request</small>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-node php-node">
+                    <span class="node-number">03</span>
+                    <strong>PHP</strong>
+                    <small>Processes the logic</small>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-node">
+                    <span class="node-number">04</span>
+                    <strong>HTML</strong>
+                    <small>Returns the result</small>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="lesson-section syntax-section" id="syntax">
+
+            <div class="lesson-index">
+                <span>02</span>
+                <small>SYNTAX</small>
+            </div>
+
+
+            <div class="lesson-content">
+
+                <div class="lesson-heading">
+                    <span class="orange-label">FIRST STEP</span>
+
+                    <h2>
+                        Meet the PHP
+                        <br>
+                        syntax.
+                    </h2>
+
+                    <p>
+                        PHP code is usually written inside
+                        <code>&lt;?php</code> and <code>?&gt;</code>.
+                        Statements commonly end with a semicolon.
+                    </p>
+                </div>
+
+
+                <div class="code-editor syntax-editor">
+
+                    <div class="editor-top">
+                        <div class="editor-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <span>hello.php</span>
+                    </div>
+
+                    <div class="code-content">
+					
+<pre><span class="php-tag">&lt;?php</span>
+
+<span class="variable">$language</span> = <span class="string">"PHP"</span>;
+
+<span class="keyword">echo</span> <span class="string">"Hello, "</span>
+     . <span class="variable">$language</span>;
+
+<span class="php-tag">?&gt;</span></pre>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="variable-section">
+
+            <div class="variable-copy">
+
+                <span class="section-number">03: VARIABLES</span>
+
+                <h2>
+                    Store data.
+                    <br>
+                    Use it later.
+                </h2>
+
+                <p>
+                    Variables hold information such as names, numbers,
+                    text, and other values. In PHP, variables begin with
+                    the <strong>$</strong> symbol.
+                </p>
+
+            </div>
+
+
+            <div class="data-shelf">
+
+                <div class="data-label">
+                    PHP DATA SHELF
+                </div>
+
+                <div class="data-item">
+                    <span class="data-symbol">$</span>
+
+                    <div>
+                        <small>STRING</small>
+                        <strong>$name</strong>
+                    </div>
+
+                    <code>"Joana Marie Guibao"</code>
+                </div>
+
+
+                <div class="data-item">
+                    <span class="data-symbol">$</span>
+
+                    <div>
+                        <small>INTEGER</small>
+                        <strong>$number</strong>
+                    </div>
+
+                    <code>29</code>
+                </div>
+
+
+                <div class="data-item">
+                    <span class="data-symbol">$</span>
+
+                    <div>
+                        <small>BOOLEAN</small>
+                        <strong>$active</strong>
+                    </div>
+
+                    <code>true</code>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="logic-section" id="logic">
+
+            <div class="section-heading-wide">
+
+                <span class="section-number">04: LOGIC</span>
+
+                <h2>
+                    Teach your code
+                    <br>
+                    how to decide.
+                </h2>
+
+            </div>
+
+
+            <div class="decision-layout">
+
+                <div class="decision-copy">
+
+                    <p class="large-copy">
+                        Conditional statements allow PHP to execute
+                        different code depending on whether a condition
+                        is true or false.
+                    </p>
+
+                    <div class="condition-question">
+                        <span>QUESTION</span>
+                        Is the age 18 or higher?
+                    </div>
+
+                </div>
+
+
+                <div class="decision-map">
+
+                    <div class="decision-start">
+                        $age >= 18?
+                    </div>
+
+                    <div class="branches">
+
+                        <div class="branch yes-branch">
+                            <span>TRUE</span>
+
+                            <div class="branch-result">
+                                <strong>You can vote.</strong>
+                                <code>echo "Yes";</code>
+                            </div>
+                        </div>
+
+
+                        <div class="branch no-branch">
+                            <span>FALSE</span>
+
+                            <div class="branch-result">
+                                <strong>Not yet.</strong>
+                                <code>echo "No";</code>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="code-strip">
+			
+<pre><span class="keyword">if</span> (<span class="variable">$age</span> &gt;= <span class="number">18</span>) {
+    <span class="keyword">echo</span> <span class="string">"You can vote."</span>;
+} <span class="keyword">else</span> {
+    <span class="keyword">echo</span> <span class="string">"Not yet."</span>;
+}</pre>
+            </div>
+
+        </section>
+
+        <section class="loops-section">
+
+            <div class="loops-title">
+
+                <span class="section-number">05: LOOPS</span>
+
+                <h2>
+                    Repeat
+                    <span>without</span>
+                    rewriting.
+                </h2>
+
+                <p>
+                    Loops run a block of code repeatedly while a
+                    condition is satisfied.
+                </p>
+
+            </div>
+
+
+            <div class="loop-visual">
+
+                <div class="loop-circle">
+
+                    <div class="loop-center">
+                        <span>LOOP</span>
+                        <strong>REPEAT</strong>
+                    </div>
+
+                    <div class="loop-orbit orbit-one">
+                        01
+                    </div>
+
+                    <div class="loop-orbit orbit-two">
+                        02
+                    </div>
+
+                    <div class="loop-orbit orbit-three">
+                        03
+                    </div>
+
+                    <div class="loop-arrow">
+                        ↻
+                    </div>
+
+                </div>
+
+
+                <div class="loop-code">
+				
+<pre><span class="keyword">for</span> (
+    <span class="variable">$i</span> = <span class="number">11</span>;
+    <span class="variable">$i</span> &lt;= <span class="number">29</span>;
+    <span class="variable">$i</span>++
+) {
+    <span class="keyword">echo</span> <span class="variable">$i</span>;
+}</pre>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="functions-section" id="functions">
+
+            <div class="function-header">
+
+                <div>
+                    <span class="section-number">06: FUNCTIONS</span>
+
+                    <h2>
+                        Build reusable
+                        <br>
+                        pieces of logic.
+                    </h2>
+                </div>
+
+                <p>
+                    Functions group instructions into a reusable block.
+                    You can call the function whenever you need it.
+                </p>
+
+            </div>
+
+
+            <div class="function-blueprint">
+
+                <div class="blueprint-piece piece-name">
+                    <span>FUNCTION</span>
+                    <strong>greet()</strong>
+                </div>
+
+                <div class="blueprint-connector">+</div>
+
+                <div class="blueprint-piece piece-input">
+                    <span>INPUT</span>
+                    <strong>$name</strong>
+                </div>
+
+                <div class="blueprint-connector">+</div>
+
+                <div class="blueprint-piece piece-output">
+                    <span>OUTPUT</span>
+                    <strong>Hello</strong>
+                </div>
+
+            </div>
+
+
+            <div class="function-code">
+			
+<pre><span class="keyword">function</span> <span class="function">greet</span>(<span class="variable">$name</span>) {
+    <span class="keyword">return</span> <span class="string">"Hello "</span> . <span class="variable">$name</span>;
+}
+
+<span class="keyword">echo</span> <span class="function">greet</span>(<span class="string">"Joana"</span>);</pre>
+            </div>
+
+        </section>
+
+
+        <section class="array-section">
+
+            <div class="array-intro">
+
+                <span class="section-number">07: ARRAYS</span>
+
+                <h2>
+                    Keep related
+                    <br>
+                    values together.
+                </h2>
+
+                <p>
+                    Arrays allow you to store multiple values inside
+                    one variable.
+                </p>
+
+            </div>
+
+
+            <div class="array-grid">
+
+                <div class="array-header">
+                    <span>INDEX</span>
+                    <span>VALUE</span>
+                </div>
+
+                <div class="array-row">
+                    <span>0</span>
+                    <strong>"Joana"</strong>
+                </div>
+
+                <div class="array-row">
+                    <span>1</span>
+                    <strong>"Marie"</strong>
+                </div>
+
+                <div class="array-row">
+                    <span>2</span>
+                    <strong>"Guibao"</strong>
+                </div>
+
+            </div>
+
+
+            <div class="array-code">
+			
+<pre><span class="variable">$students</span> = [
+    <span class="string">"Joana"</span>,
+    <span class="string">"Marie"</span>,
+    <span class="string">"Guibao"</span>
+];</pre>
+            </div>
+
+        </section>
+
+        <section class="forms-section" id="forms">
+
+            <div class="form-heading">
+
+                <span class="section-number">08: FORMS</span>
+
+                <h2>
+                    Connect PHP
+                    <br>
+                    to user input.
+                </h2>
+
+            </div>
+
+
+            <div class="form-flow">
+
+                <div class="form-step">
+
+                    <div class="step-icon">01</div>
+
+                    <strong>USER</strong>
+
+                    <span>
+                        enters information
+                    </span>
+
+                </div>
+
+                <div class="form-line"></div>
+
+
+                <div class="form-step">
+
+                    <div class="step-icon">02</div>
+
+                    <strong>POST</strong>
+
+                    <span>
+                        sends the data
+                    </span>
+
+                </div>
+
+
+                <div class="form-line"></div>
+
+
+                <div class="form-step php-step">
+
+                    <div class="step-icon">03</div>
+
+                    <strong>PHP</strong>
+
+                    <span>
+                        processes input
+                    </span>
+
+                </div>
+
+
+                <div class="form-line"></div>
+
+
+                <div class="form-step">
+
+                    <div class="step-icon">04</div>
+
+                    <strong>RESPONSE</strong>
+
+                    <span>
+                        displays result
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-example">
+
+                <div class="fake-form">
+
+                    <div class="fake-form-top">
+                        SIMPLE FORM
+                    </div>
+
+                    <label>Your Name</label>
+
+                    <div class="fake-input">
+                        Joana
+                    </div>
+
+                    <button>
+                        Submit
+                    </button>
+
+                </div>
+
+
+                <div class="form-code">
+<pre><span class="variable">$name</span> =
+    <span class="variable">$_POST</span>[<span class="string">"name"</span>];
+
+<span class="keyword">echo</span>
+    <span class="string">"Welcome "</span>
+    . <span class="variable">$name</span>;</pre>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="reference-section">
+
+            <div class="reference-title">
+                <span class="section-number">09: QUICK REFERENCE</span>
+
+                <h2>
+                    PHP essentials
+                    <br>
+                    at a glance.
+                </h2>
+            </div>
+
+
+            <div class="reference-list">
+
+                <div class="reference-item">
+                    <span>01</span>
+                    <code>$variable</code>
+                    <p>Stores a value</p>
+                </div>
+
+                <div class="reference-item">
+                    <span>02</span>
+                    <code>echo</code>
+                    <p>Outputs information</p>
+                </div>
+
+                <div class="reference-item">
+                    <span>03</span>
+                    <code>if / else</code>
+                    <p>Makes decisions</p>
+                </div>
+
+                <div class="reference-item">
+                    <span>04</span>
+                    <code>for / while</code>
+                    <p>Repeats instructions</p>
+                </div>
+
+                <div class="reference-item">
+                    <span>05</span>
+                    <code>function</code>
+                    <p>Creates reusable logic</p>
+                </div>
+
+                <div class="reference-item">
+                    <span>06</span>
+                    <code>$_POST</code>
+                    <p>Receives form data</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="lab-section" id="lab">
+
+            <div class="lab-top">
+
+                <div>
+
+                    <span class="lab-label">
+                        PHP//PULSE LAB
+                    </span>
+
+                    <h2>
+                        Your turn.
+                    </h2>
+
+                </div>
+
+                <p>
+                    Experiment with PHP directly in the browser.
+                    Change the code, run it, and see what happens.
+                </p>
+
+            </div>
+
+
+            <div class="lab-workspace">
+
+                <div class="challenge-panel">
+
+                    <span class="challenge-label">
+                        CHALLENGE 01
+                    </span>
+
+                    <h3>
+                        Make PHP
+                        <br>
+                        say hello.
+                    </h3>
+
+                    <p>
+                        Create a variable named
+                        <code>$name</code>, give it a name,
+                        and use <code>echo</code> to display
+                        a greeting.
+                    </p>
+
+                    <div class="challenge-example">
+                        <span>EXPECTED IDEA</span>
+
+                        <code>
+                            Hello, Joana!
+                        </code>
+                    </div>
+
+                    <div class="lab-tip">
+                        <span>TIP</span>
+                        PHP variables always begin with <strong>$</strong>.
+                    </div>
+
+                </div>
+
+
+                <div class="compiler-panel">
+
+                    <div class="compiler-header">
+
+                        <div class="compiler-status">
+                            <span></span>
+                            ONLINE COMPILER
+                        </div>
+
+                        <span class="compiler-language">
+                            PHP
+                        </span>
+
+                    </div>
+
+                    <iframe
+                        src="https://onecompiler.com/embed/php"
+                        title="PHP Online Compiler"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-brand">
+            PHP<span>//</span>PULSE
+        </div>
+
+        <p>
+            Code the logic behind the web.
+        </p>
+
+        <span class="footer-copy">
+            © Joana Marie Guibao: PHP//PULSE 
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
